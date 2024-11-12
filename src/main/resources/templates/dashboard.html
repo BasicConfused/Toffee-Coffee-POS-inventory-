@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen m-0 bg-gray-200">
+<div class="w-64 bg-[#OB2B26] text-white p-5 shadow-lg border-r-4 border-red-500">
+  <h2 class="text-2xl font-bold mb-5">Dashboard</h2>
+  <a href="#" onclick="showTab('home')" class="block text-red-500 border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF]">Home</a>
+  <a href="#" onclick="showTab('profile')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Profile</a>
+  <a href="#" onclick="showTab('product')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Product</a>
+  <a href="#" onclick="showTab('customer')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Customer</a>
+  <a href="#" onclick="showTab('transaction')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Transaction</a>
+  <a href="#" onclick="showTab('employee')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Employee</a>
+  <a href="#" onclick="showTab('sales')" class="block text-red-500 p-2 mb-2 border-2 border-red-500 rounded hover:bg-red-500 hover:text-black">Sales</a>
+</div>
+<div class="flex-grow p-5 bg-white border-l-4 border-red-500">
+  <div id="home" class="tab-content active">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Home</h2>
+    <p class="text-lg">Welcome to the dashboard!</p>
+  </div>
+  <div id="profile" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Profile</h2>
+    <p class="text-lg">Manage your profile here.</p>
+  </div>
+  <div id="product" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Product</h2>
+    <p class="text-lg">Manage your products here.</p>
+  </div>
+  <div id="customer" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Customer</h2>
+    <p class="text-lg">Manage your customers here.</p>
+  </div>
+  <div id="transaction" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Transaction</h2>
+    <p class="text-lg">View your transactions here.</p>
+  </div>
+  <div id="employee" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Employee</h2>
+    <p class="text-lg">Manage your employees here.</p>
+  </div>
+  <div id="sales" class="tab-content hidden">
+    <h2 class="text-3xl font-bold mb-5 border-b-4 border-red-500 pb-2">Sales</h2>
+    <p class="text-lg">View your sales data here.</p>
+  </div>
+</div>
+<script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function(tab) {
+      tab.classList.add('hidden');
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.remove('hidden');
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+</body>
+</html>
