@@ -13,7 +13,7 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/main/resources/static/input.css -o ./src/main/resources/templates/style.css --watch"
+    "dev": "npx tailwindcss -i ./src/main/resources/static/input.css -o ./src/main/resources/static/style.css --watch"
   },
   "keywords": [],
   "author": "",

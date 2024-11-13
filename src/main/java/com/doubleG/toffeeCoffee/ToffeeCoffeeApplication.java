@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.SQLOutput;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "con.project")
 public class ToffeeCoffeeApplication {
 
 	public static void main(String[] args) {

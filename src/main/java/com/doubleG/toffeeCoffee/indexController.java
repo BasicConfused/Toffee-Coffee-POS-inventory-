@@ -15,6 +15,6 @@ public class indexController {
 
     @PostMapping("/register")
     public String userRegistration(){
-        return "index";
+        return "Sign-up";
     }
 }
