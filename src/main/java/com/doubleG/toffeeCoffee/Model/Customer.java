@@ -1,6 +1,4 @@
-package com.doubleG.toffeeCoffee.entity;
-
-import jakarta.persistence.Entity;
+package com.doubleG.toffeeCoffee.Model;
 
 import java.util.Objects;
 

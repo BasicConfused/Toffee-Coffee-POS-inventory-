@@ -1,4 +1,4 @@
-package com.doubleG.toffeeCoffee.entity;
+package com.doubleG.toffeeCoffee.Model;
 
 import java.util.Date;
 import java.util.Objects;
