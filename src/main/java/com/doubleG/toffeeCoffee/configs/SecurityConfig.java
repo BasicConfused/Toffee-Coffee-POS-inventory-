@@ -1,4 +1,4 @@
-package configs;
+package com.doubleG.toffeeCoffee.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,8 +19,8 @@ public class SecurityConfig {
                 })
                 .authorizeHttpRequests(registry -> {
                     registry
-                            .requestMatchers("/Sign-up", "/static/**").permitAll() // Allow access to Sign-up and static resources
-                            .anyRequest().authenticated(); // All other requests require authentication
+                            .requestMatchers("/Sign-up", "/static/**").permitAll()
+                            .anyRequest().authenticated();
                 })
                 .build();
     }
