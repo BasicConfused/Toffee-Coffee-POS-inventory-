@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 @RestController
 public class indexController {
-    @GetMapping("/index")
+    @GetMapping("/login")
     public String login(){
-        return "index";
+        return "login";
     }
 
-    @GetMapping("/Sign-up")
+    @GetMapping("/Signup")
     public String signup(){
-        return "Sign-up";
+        return "Signup";
     }
 
 }

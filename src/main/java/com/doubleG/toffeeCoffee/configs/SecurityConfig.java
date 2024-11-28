@@ -15,11 +15,11 @@ public class SecurityConfig {
         return httpSecurity
                 .formLogin(httpForm -> {
                     httpForm
-                            .loginPage("/index").permitAll();
+                            .loginPage("/login").permitAll();
                 })
                 .authorizeHttpRequests(registry -> {
                     registry
-                            .requestMatchers("/Sign-up", "/static/**").permitAll()
+                            .requestMatchers("/Signup", "/static/style", "/js/**").permitAll()
                             .anyRequest().authenticated();
                 })
                 .build();

@@ -13,8 +13,8 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/main/resources/static/input.css -o ./src/main/resources/static/style.css --minify",
-    "watch": "tailwindcss -i ./src/main/resources/static/input.css -o ./src/main/resources/static/style.css --watch"
+    "build": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --minify",
+    "watch": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
