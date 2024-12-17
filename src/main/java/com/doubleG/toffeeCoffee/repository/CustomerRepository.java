@@ -1,6 +1,6 @@
-package com.doubleG.toffeeCoffee.controller;
-
+package com.doubleG.toffeeCoffee.repository;
 import com.doubleG.toffeeCoffee.repository.CustomerRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/customers") // Base URL for all requests in this controller
-public class CustomerController {
+public class CustomerRepository {
 
     /**
      * Dependency injection for the CustomerRepository to interact with the database.

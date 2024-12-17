@@ -1,4 +1,6 @@
-package com.doubleG.toffeeCoffee.Model;
+package com.doubleG.toffeeCoffee.model;
+
+import java.io.Serializable;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,8 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
-import java.io.Serializable;
 
 @Entity
 public class User implements Serializable {

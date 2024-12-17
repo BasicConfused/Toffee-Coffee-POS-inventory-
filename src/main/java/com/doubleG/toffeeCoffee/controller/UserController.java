@@ -1,8 +1,10 @@
 package com.doubleG.toffeeCoffee.controller;
 
-import com.doubleG.toffeeCoffee.Model.User;
+import com.doubleG.toffeeCoffee.model.User;
+import com.doubleG.toffeeCoffee.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -11,7 +13,12 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/register")
+    @GetMapping("/Signup") 
+    public String showRegistrationForm() {
+        return "Signup";
+    }
+    
+    @PostMapping("/Signup")
     public String registerUser(@RequestParam String firstName, @RequestParam String lastName,
                                @RequestParam String username, @RequestParam String password) {
         User user = new User();
