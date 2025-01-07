@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../static/css/style.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
   <title>Dashboard</title>
 </head>
 
@@ -23,7 +23,7 @@
       class="block text-white p-2 mb-2 hover:bg-[#8EB69B] hover:text-black border-black font-bold border-2 p-2.5 rounded-md">Transaction</a>
     <a href="#" onclick="showTab('employee')"
       class="block text-white p-2 mb-2 hover:bg-[#8EB69B] hover:text-black border-black font-bold border-2 p-2.5 rounded-md">Employee</a>
-    <a href="#" onclick="showTab('sales')"
+    <a href="#" onclick="showTab('inventory')"
       class="block text-white p-2 mb-2 hover:bg-[#8EB69B] hover:text-black border-black font-bold border-2 p-2.5 rounded-md">Inventory</a>
     <button
       class="w-full h-12 mt-5 border-black font-bold border-2 p-2.5 bg-[#235347] hover:bg-[#a02525] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#ef0000] rounded-md hover:text-white">
@@ -56,13 +56,8 @@
                 <p class="text-base mb-4">May 15th, 2023</p>
                 <h1 class="text-[32px] mb-4">Product</h1>
                 <p class="text-xs mb-4 line-clamp-4">
-                  Neobrutalism is an aesthetic characterized by high contrast
-                  elements, bright colors, and bold shapes. It is often used to make
-                  a statement, as it is meant to be eye-catching and stand out to
-                  the viewer. It is also used in user interface and web design, with
-                  features such as vibrant colors and bold shapes. Neobrutalism can
-                  also be used in print design, with an example being a bold shape
-                  with a vibrant color fill applied to it.
+                  Add your product quickly, personalize
+                  it and start making money!
                 </p>
                 <strong>Add Product</strong>
               </div>
@@ -85,13 +80,7 @@
                 <p class="text-base mb-4">May 15th, 2023</p>
                 <h1 class="text-[32px] mb-4">EMPLOYEE</h1>
                 <p class="text-xs mb-4 line-clamp-4">
-                  Neobrutalism is an aesthetic characterized by high contrast
-                  elements, bright colors, and bold shapes. It is often used to make
-                  a statement, as it is meant to be eye-catching and stand out to
-                  the viewer. It is also used in user interface and web design, with
-                  features such as vibrant colors and bold shapes. Neobrutalism can
-                  also be used in print design, with an example being a bold shape
-                  with a vibrant color fill applied to it.
+                  Bring your whole team on board
                 </p>
                 <strong>Add Employee</strong>
               </div>
@@ -114,13 +103,8 @@
                 <p class="text-base mb-4">May 15th, 2023</p>
                 <h1 class="text-[32px] mb-4">Customer</h1>
                 <p class="text-xs mb-4 line-clamp-4">
-                  Neobrutalism is an aesthetic characterized by high contrast
-                  elements, bright colors, and bold shapes. It is often used to make
-                  a statement, as it is meant to be eye-catching and stand out to
-                  the viewer. It is also used in user interface and web design, with
-                  features such as vibrant colors and bold shapes. Neobrutalism can
-                  also be used in print design, with an example being a bold shape
-                  with a vibrant color fill applied to it.
+                  Add customer info to navigate
+                  and to keep in touch with them.
                 </p>
                 <strong>Add Customer</strong>
               </div>
@@ -128,6 +112,32 @@
           </a>
         </div>
       </div>
+
+      <!-- Inventory CARD -->
+      <div class="w-80 h-full border-black border-2 rounded-md hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white m-4">
+        <a href="#" onclick="showTab('inventory')" class="block cursor-pointer">
+          <article class="w-full h-full">
+            <figure class="w-full h-1/2 border-black border-b-2">
+              <img
+                      src="https://neo-brutalism-ui-library.vercel.app/assets/neo-brutalism-image3-6c6a875b.jpg"
+                      alt="Inventory photo"
+                      class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="px-6 py-5 text-left h-full">
+              <p class="text-base mb-4">May 15th, 2023</p>
+              <h1 class="text-[32px] mb-4">Inventory</h1>
+              <p class="text-xs mb-4 line-clamp-4">
+                POS stock control allows you to register
+                products in seconds.
+              </p>
+              <strong>View Inventory</strong>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <!--Chart progress starts here-->
     </div>
 
 
@@ -213,157 +223,56 @@
       </h2>
       <p class="text-lg">Manage your products here.</p>
 
-      <div class="bg-white border-2 border-black shadow-lg p-8 rounded-lg max-w-4xl w-full">
-        <h2 class="text-3xl font-bold uppercase mb-5 border-b-4 border-black pb-2 text-center">
-          Product Tab
-        </h2>
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            Product Information
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Product Name:</span> Sample Product
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">SKU/Barcode:</span> 123456789
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Category:</span> Electronics
-          </p>
-          <p class="mb-2"><span class="font-bold">Brand:</span> Brand Name</p>
-          <p class="mb-2">
-            <span class="font-bold">Description:</span> This is a sample
-            product description.
-          </p>
-        </div>
+      <!-- Button to add a new div -->
+      <button id="addButton" class="w-60 h-12 mt-5 border-black font-bold border-2 p-2.5 bg-[#235347] hover:bg-[#a02525] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#ef0000] rounded-md hover:text-white">
+        Add New Product
+      </button>
 
-        <!-- Pricing Information -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            Pricing Information
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Cost Price:</span> $50.00
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Selling Price:</span> $75.00
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Discounts:</span> 10% off
-          </p>
-        </div>
-
-        <!-- Stock Information -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">Stock Information</h3>
-          <p class="mb-2">
-            <span class="font-bold">Quantity:</span> 100 units
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Reorder Level:</span> 20 units
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Supplier:</span> Supplier Name
-          </p>
-        </div>
-
-        <!-- Inventory Management -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            Inventory Management
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Stock Adjustments:</span> Manual
-            adjustments allowed
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Stock History:</span> Log of all stock
-            movements available
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Low Stock Alerts:</span> Enabled
-          </p>
-        </div>
-
-        <!-- Sales and Reporting -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            Sales and Reporting
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Sales Reports:</span> Available for
-            various periods
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Sales Trends:</span> Visualized sales
-            trends
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Inventory Valuation:</span> Current
-            inventory value calculated
-          </p>
-        </div>
-
-        <!-- Custom Attributes -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">Custom Attributes</h3>
-          <p class="mb-2">
-            <span class="font-bold">Custom Fields:</span> Additional fields
-            can be added
-          </p>
-        </div>
-
-        <!-- Integration -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">Integration</h3>
-          <p class="mb-2">
-            <span class="font-bold">Barcode Scanner:</span> Compatible
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Supplier Integration:</span> Automated
-            stock replenishment
-          </p>
-        </div>
-
-        <!-- User Access Control -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            User Access Control
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Permissions:</span> Different access
-            levels for users
-          </p>
-        </div>
-
-        <!-- Batch Management -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">Batch Management</h3>
-          <p class="mb-2">
-            <span class="font-bold">Batch Number:</span> Products tracked by
-            batch number
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Expiry Date:</span> Perishable goods
-            tracked
-          </p>
-        </div>
-
-        <!-- Additional Features -->
-        <div class="mb-6">
-          <h3 class="text-xl font-bold uppercase mb-2">
-            Additional Features
-          </h3>
-          <p class="mb-2">
-            <span class="font-bold">Unit of Measure:</span> Defined for
-            products
-          </p>
-          <p class="mb-2">
-            <span class="font-bold">Tax Information:</span> Included for
-            accurate billing
-          </p>
-        </div>
+      <!-- Container to hold the dynamically created divs -->
+      <div id="container" class="flex flex-wrap gap-5 p-5">
+        <!-- Dynamic divs will appear here -->
       </div>
+
+      <script>
+        // Get the button and container by their IDs
+        const addButton = document.getElementById('addButton');
+        const container = document.getElementById('container');
+
+        // Add an event listener to the button
+        addButton.addEventListener('click', () => {
+            // Create a new div element
+            const newDiv = document.createElement('div');
+
+            // Set the outermost div's classes
+            newDiv.className = 'w-80 h-full border-black border-2 rounded-md hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white';
+
+            // Add the inner content
+            newDiv.innerHTML = `
+              <a href="#" class="block cursor-pointer">
+                <article class="w-full h-full">
+                  <figure class="w-full h-1/2 border-black border-b-2"></figure>
+                  <div class="px-6 py-5 text-left h-full">
+                    <p class="text-base mb-4">May 15th, 2023</p>
+                    <h1 class="text-[32px] mb-4">Neo Brutallism</h1>
+                    <p class="text-xs mb-4 line-clamp-4">
+                      Neobrutalism is an aesthetic characterized by high contrast
+                      elements, bright colors, and bold shapes. It is often used to make
+                      a statement, as it is meant to be eye-catching and stand out to
+                      the viewer. It is also used in user interface and web design, with
+                      features such as vibrant colors and bold shapes. Neobrutalism can
+                      also be used in print design, with an example being a bold shape
+                      with a vibrant color fill applied to it.
+                    </p>
+                    <strong>Read More</strong>
+                  </div>
+                </article>
+              </a>
+            `;
+
+            // Append the new div to the container
+            container.appendChild(newDiv);
+        });
+      </script>
     </div>
 
     <!--THIS IS WHERE THE CUSTOMER TAB START-->
@@ -499,7 +408,7 @@
     </div>
 
     <!--THIS IS WHERE THE Inventory TAB START-->
-    <div id="sales" class="tab-content hidden">
+    <div id="inventory" class="tab-content hidden">
       <h2 class="text-3xl font-bold mb-5 border-b-4 border-black pb-2">
         Inventory
       </h2>

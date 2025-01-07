@@ -1,22 +1,24 @@
-package com.doubleG.toffeeCoffee.controller;
+package com.doubleG.toffeeCoffee.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
+
+    @GetMapping("/")
+    public String home() {
+        return "index"; // Serves index.html as the home page
+    }
+
     @GetMapping("/login")
     public String login() {
-        return "login"; // Thymeleaf will resolve this to Login.html in templates
+        return "Login"; // Maps to Login.html in templates
     }
 
-    @GetMapping("/Signup")
+    @GetMapping("/signup")
     public String signup() {
-        return "Signup"; // Thymeleaf will resolve this to Signup.html in templates
+        return "Signup"; // Maps to Signup.html in templates
     }
 
-    @GetMapping("/index")
-    public String index() {
-        return "index"; // Thymeleaf will resolve this to index.html in templates
-    }
 }

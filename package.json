@@ -1,4 +1,14 @@
 {
+  "name": "toffeecoffee",
+  "version": "1.0.0",
+  "description": "POS inventory system using Spring Boot and Tailwind CSS",
+  "main": "",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --minify",
+    "watch": "npx tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch"
+  },
+  "author": "Your Name",
+  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.48",
@@ -9,15 +19,10 @@
     "lucide-react": "^0.454.0",
     "tailwind-merge": "^2.5.4"
   },
-  "name": "toffeecoffee",
-  "version": "1.0.0",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "build": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --minify",
-    "watch": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": [
+    "POS",
+    "Inventory",
+    "Spring Boot",
+    "Tailwind CSS"
+  ]
 }

@@ -1,14 +1,17 @@
-package com.doubleG.toffeeCoffee.controller;
+package com.doubleG.toffeeCoffee.Controller;
 
-import com.doubleG.toffeeCoffee.model.User;
-import com.doubleG.toffeeCoffee.service.UserService;
+import com.doubleG.toffeeCoffee.Model.User;
+import com.doubleG.toffeeCoffee.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
+
+
+@Controller
 @RequestMapping("/register")
 public class UserController {
 
